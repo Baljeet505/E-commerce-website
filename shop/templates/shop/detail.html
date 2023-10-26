@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% extends "shop/base.html" %}
+{% block body %}
+<div class="container " style="margin-top:50px">
+    <div class="row rounded-right bg-warning">
+        <div class="col-md-6">
+            <div class="row rounded-left bg-info">
+                <div class="col-md-12">
+                    <img src="{{ product_object.image}}" height="500px">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <h2>{{ product_object.title}}</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>{{ product_object.description}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>{{ product_object.price}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>{{ product_object.discount_price}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="btn btn-info" href="{% url 'index'%}" role="button">Go Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
